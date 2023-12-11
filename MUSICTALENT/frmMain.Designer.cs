@@ -37,11 +37,13 @@ namespace MUSICTALENT
             this.nhạcCụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhàCungCấpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giấyTờToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuSựCốToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuBảoHànhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thuêMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sốLiệuNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,8 +55,6 @@ namespace MUSICTALENT
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.nhàCungCấpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thuêMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -109,23 +109,30 @@ namespace MUSICTALENT
             // 
             this.nhạcCụToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.nhạcCụToolStripMenuItem.Name = "nhạcCụToolStripMenuItem";
-            this.nhạcCụToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.nhạcCụToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.nhạcCụToolStripMenuItem.Text = "Nhạc cụ";
             this.nhạcCụToolStripMenuItem.Click += new System.EventHandler(this.nhạcCụToolStripMenuItem_Click);
             // 
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // kháchHàngToolStripMenuItem
             // 
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
             this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
+            // 
+            // nhàCungCấpToolStripMenuItem
+            // 
+            this.nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
+            this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.nhàCungCấpToolStripMenuItem.Text = "Nhà cung cấp";
+            this.nhàCungCấpToolStripMenuItem.Click += new System.EventHandler(this.nhàCungCấpToolStripMenuItem_Click);
             // 
             // giấyTờToolStripMenuItem
             // 
@@ -163,6 +170,12 @@ namespace MUSICTALENT
             this.phiếuBảoHànhToolStripMenuItem.Name = "phiếuBảoHànhToolStripMenuItem";
             this.phiếuBảoHànhToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
             this.phiếuBảoHànhToolStripMenuItem.Text = "Phiếu bảo hành";
+            // 
+            // thuêMượnToolStripMenuItem
+            // 
+            this.thuêMượnToolStripMenuItem.Name = "thuêMượnToolStripMenuItem";
+            this.thuêMượnToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.thuêMượnToolStripMenuItem.Text = "Thuê mượn";
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -274,19 +287,6 @@ namespace MUSICTALENT
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
-            // 
-            // nhàCungCấpToolStripMenuItem
-            // 
-            this.nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
-            this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.nhàCungCấpToolStripMenuItem.Text = "Nhà cung cấp";
-            this.nhàCungCấpToolStripMenuItem.Click += new System.EventHandler(this.nhàCungCấpToolStripMenuItem_Click);
-            // 
-            // thuêMượnToolStripMenuItem
-            // 
-            this.thuêMượnToolStripMenuItem.Name = "thuêMượnToolStripMenuItem";
-            this.thuêMượnToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.thuêMượnToolStripMenuItem.Text = "Thuê mượn";
             // 
             // frmMain
             // 

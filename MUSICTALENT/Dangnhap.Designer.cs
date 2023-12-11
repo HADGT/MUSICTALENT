@@ -42,6 +42,7 @@
             // 
             resources.ApplyResources(this.btnthoat, "btnthoat");
             this.btnthoat.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnthoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.UseVisualStyleBackColor = false;
@@ -51,6 +52,7 @@
             // 
             resources.ApplyResources(this.btndangnhap, "btndangnhap");
             this.btndangnhap.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btndangnhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btndangnhap.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btndangnhap.Name = "btndangnhap";
             this.btndangnhap.UseVisualStyleBackColor = false;

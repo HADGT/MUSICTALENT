@@ -17,6 +17,7 @@ namespace MUSICTALENT
         public frmMain()
         {
             InitializeComponent();
+            CenterToScreen(); // Hiển thị form ở giữa màn hình khi form được khởi tạo
         }
 
         private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)

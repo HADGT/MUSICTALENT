@@ -82,8 +82,6 @@ namespace MUSICTALENT
             this.chiTiếtChiTiếuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chiTiếtThuVàoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dữLiệuNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -182,11 +180,11 @@ namespace MUSICTALENT
             // 
             // cbbMADVT
             // 
-            this.cbbMADVT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMADVT.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.cbbMADVT.FormattingEnabled = true;
             this.cbbMADVT.Location = new System.Drawing.Point(137, 165);
             this.cbbMADVT.Name = "cbbMADVT";
-            this.cbbMADVT.Size = new System.Drawing.Size(104, 28);
+            this.cbbMADVT.Size = new System.Drawing.Size(104, 30);
             this.cbbMADVT.TabIndex = 3;
             // 
             // label8
@@ -232,17 +230,17 @@ namespace MUSICTALENT
             // txtGIA
             // 
             this.txtGIA.BackColor = System.Drawing.Color.White;
-            this.txtGIA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGIA.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtGIA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtGIA.Location = new System.Drawing.Point(331, 165);
             this.txtGIA.Name = "txtGIA";
-            this.txtGIA.Size = new System.Drawing.Size(78, 26);
+            this.txtGIA.Size = new System.Drawing.Size(78, 30);
             this.txtGIA.TabIndex = 1;
             // 
             // txtGHICHU
             // 
             this.txtGHICHU.BackColor = System.Drawing.Color.White;
-            this.txtGHICHU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGHICHU.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtGHICHU.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtGHICHU.Location = new System.Drawing.Point(137, 227);
             this.txtGHICHU.Multiline = true;
@@ -253,21 +251,21 @@ namespace MUSICTALENT
             // txtTENNC
             // 
             this.txtTENNC.BackColor = System.Drawing.Color.White;
-            this.txtTENNC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTENNC.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtTENNC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtTENNC.Location = new System.Drawing.Point(137, 104);
             this.txtTENNC.Name = "txtTENNC";
-            this.txtTENNC.Size = new System.Drawing.Size(272, 26);
+            this.txtTENNC.Size = new System.Drawing.Size(272, 30);
             this.txtTENNC.TabIndex = 1;
             // 
             // txtSOLUONG
             // 
             this.txtSOLUONG.BackColor = System.Drawing.Color.White;
-            this.txtSOLUONG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSOLUONG.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtSOLUONG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSOLUONG.Location = new System.Drawing.Point(345, 47);
             this.txtSOLUONG.Name = "txtSOLUONG";
-            this.txtSOLUONG.Size = new System.Drawing.Size(64, 26);
+            this.txtSOLUONG.Size = new System.Drawing.Size(64, 30);
             this.txtSOLUONG.TabIndex = 1;
             // 
             // label3
@@ -283,11 +281,11 @@ namespace MUSICTALENT
             // txtMANC
             // 
             this.txtMANC.BackColor = System.Drawing.Color.White;
-            this.txtMANC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMANC.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtMANC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtMANC.Location = new System.Drawing.Point(137, 49);
             this.txtMANC.Name = "txtMANC";
-            this.txtMANC.Size = new System.Drawing.Size(104, 26);
+            this.txtMANC.Size = new System.Drawing.Size(104, 30);
             this.txtMANC.TabIndex = 1;
             // 
             // label2
@@ -585,18 +583,21 @@ namespace MUSICTALENT
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
             this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
+            this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // kháchHàngToolStripMenuItem
             // 
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
             this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
+            this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
             // 
             // nhàCungCấpToolStripMenuItem
             // 
             this.nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
             this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.nhàCungCấpToolStripMenuItem.Text = "Nhà cung cấp";
+            this.nhàCungCấpToolStripMenuItem.Click += new System.EventHandler(this.nhàCungCấpToolStripMenuItem_Click);
             // 
             // giấyTờToolStripMenuItem
             // 
@@ -679,25 +680,11 @@ namespace MUSICTALENT
             // 
             // đăngXuấtToolStripMenuItem
             // 
-            this.đăngXuấtToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dữLiệuNgườiDùngToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem1});
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
             this.đăngXuấtToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(161, 23);
-            this.đăngXuấtToolStripMenuItem.Text = "Thông tin cá nhân";
-            // 
-            // dữLiệuNgườiDùngToolStripMenuItem
-            // 
-            this.dữLiệuNgườiDùngToolStripMenuItem.Name = "dữLiệuNgườiDùngToolStripMenuItem";
-            this.dữLiệuNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.dữLiệuNgườiDùngToolStripMenuItem.Text = "Dữ liệu người dùng";
-            // 
-            // đăngXuấtToolStripMenuItem1
-            // 
-            this.đăngXuấtToolStripMenuItem1.Name = "đăngXuấtToolStripMenuItem1";
-            this.đăngXuấtToolStripMenuItem1.Size = new System.Drawing.Size(207, 24);
-            this.đăngXuấtToolStripMenuItem1.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(112, 23);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // Nhaccu
             // 
@@ -765,8 +752,6 @@ namespace MUSICTALENT
         private System.Windows.Forms.ToolStripMenuItem chiTiếtChiTiếuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chiTiếtThuVàoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dữLiệuNgườiDùngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.GroupBox groupBox2;

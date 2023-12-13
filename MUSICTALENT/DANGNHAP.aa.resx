@@ -121,18 +121,42 @@
   <data name="btnthoat.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnthoat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>236, 234</value>
+  </data>
   <data name="btndangnhap.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
+  </data>
+  <data name="btndangnhap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 234</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtmatkhau.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 14pt</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 6, 0</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 21</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Role:</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAmMAAAEQCAYAAAD8lnOPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAXK9JREFUeF7t3dvTbNt533X9H2BCQkwgBAKJjZxAOCTExUUuqKKK4gIqt9xSXFDw
+        vAAADrwBlbxySQAAXK9JREFUeF7t3dvTbNt533X9H2BCQkwgBAKJjZxAOCTExUUuqKKK4gIqt9xSXFDw
         P8QkIYmBcAoXXATugIDBxpVsHW1L2JbjSFasLe2DvLUPOmwdS5H18nve7tFrzDm/4xnP6Nk939ndz676
         Vq9ea8kXqi35U+P5ae2PfPOb33z6xje+8fT1r3/9uffff//pvffee678+Bqfpfn3ug8++AC/b/FZ6n2v
         s3//6PtLfJZ636n67wfv+x4/S6Pf68p/JtZ+z8/8vMfP0trv1Ln/Od7TZ2n0uxX97++X/CzNv1vR//95
@@ -530,6 +554,12 @@
         ePrxuc3/79pnlmVZlmXZXqqdUpp/H6n4qXaUWcuy86T564c//OHT/w/xEsT1kjkiGQAAAABJRU5ErkJg
         gg==
 </value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>418, 301</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>LOGIN</value>

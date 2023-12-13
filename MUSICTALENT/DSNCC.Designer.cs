@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DSNCC));
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dữLiệuNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,13 +54,13 @@
             this.phiếuNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuSựCốToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuBảoHànhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thuêMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sốLiệuNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chiTiếtChiTiếuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chiTiếtThuVàoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -77,11 +79,10 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
-            this.thuêMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,6 +90,7 @@
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // đăngXuấtToolStripMenuItem
@@ -223,7 +225,7 @@
             this.label1.Location = new System.Drawing.Point(4, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1153, 76);
+            this.label1.Size = new System.Drawing.Size(1297, 76);
             this.label1.TabIndex = 2;
             this.label1.Text = "THÔNG TIN NHÀ CUNG CẤP";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,7 +246,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1161, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1305, 27);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -272,25 +274,25 @@
             // 
             this.nhạcCụToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.nhạcCụToolStripMenuItem.Name = "nhạcCụToolStripMenuItem";
-            this.nhạcCụToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.nhạcCụToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.nhạcCụToolStripMenuItem.Text = "Nhạc cụ";
             // 
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             // 
             // kháchHàngToolStripMenuItem
             // 
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
             // 
             // nhàCungCấpToolStripMenuItem
             // 
             this.nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
-            this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.nhàCungCấpToolStripMenuItem.Text = "Nhà cung cấp";
             // 
             // giấyTờToolStripMenuItem
@@ -309,26 +311,32 @@
             // hóaĐơnToolStripMenuItem
             // 
             this.hóaĐơnToolStripMenuItem.Name = "hóaĐơnToolStripMenuItem";
-            this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
             this.hóaĐơnToolStripMenuItem.Text = "Hóa đơn";
             // 
             // phiếuNhậpToolStripMenuItem
             // 
             this.phiếuNhậpToolStripMenuItem.Name = "phiếuNhậpToolStripMenuItem";
-            this.phiếuNhậpToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.phiếuNhậpToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
             this.phiếuNhậpToolStripMenuItem.Text = "Phiếu nhập";
             // 
             // phiếuSựCốToolStripMenuItem
             // 
             this.phiếuSựCốToolStripMenuItem.Name = "phiếuSựCốToolStripMenuItem";
-            this.phiếuSựCốToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.phiếuSựCốToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
             this.phiếuSựCốToolStripMenuItem.Text = "Phiếu sự cố";
             // 
             // phiếuBảoHànhToolStripMenuItem
             // 
             this.phiếuBảoHànhToolStripMenuItem.Name = "phiếuBảoHànhToolStripMenuItem";
-            this.phiếuBảoHànhToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.phiếuBảoHànhToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
             this.phiếuBảoHànhToolStripMenuItem.Text = "Phiếu bảo hành";
+            // 
+            // thuêMượnToolStripMenuItem
+            // 
+            this.thuêMượnToolStripMenuItem.Name = "thuêMượnToolStripMenuItem";
+            this.thuêMượnToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
+            this.thuêMượnToolStripMenuItem.Text = "Thuê mượn";
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -374,7 +382,7 @@
             this.groupBox3.Controls.Add(this.flowLayoutPanel3);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(10)));
-            this.groupBox3.Location = new System.Drawing.Point(533, 7);
+            this.groupBox3.Location = new System.Drawing.Point(709, 7);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -383,22 +391,6 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 5);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(505, 400);
-            this.dataGridView1.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -418,7 +410,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 576F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1161, 573);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1305, 573);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -429,7 +421,7 @@
             this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 700F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 876F));
             this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 115);
@@ -437,7 +429,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1153, 461);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1297, 461);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // groupBox2
@@ -462,7 +454,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(445, 446);
+            this.groupBox2.Size = new System.Drawing.Size(413, 446);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhà cung cấp";
@@ -470,7 +462,7 @@
             // txtGHICHU
             // 
             this.txtGHICHU.BackColor = System.Drawing.Color.White;
-            this.txtGHICHU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGHICHU.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtGHICHU.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtGHICHU.Location = new System.Drawing.Point(137, 266);
             this.txtGHICHU.Multiline = true;
@@ -491,21 +483,21 @@
             // txtSDT
             // 
             this.txtSDT.BackColor = System.Drawing.Color.White;
-            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtSDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSDT.Location = new System.Drawing.Point(137, 215);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(272, 26);
+            this.txtSDT.Size = new System.Drawing.Size(272, 30);
             this.txtSDT.TabIndex = 3;
             // 
             // txtDIACHI
             // 
             this.txtDIACHI.BackColor = System.Drawing.Color.White;
-            this.txtDIACHI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDIACHI.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtDIACHI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDIACHI.Location = new System.Drawing.Point(137, 160);
             this.txtDIACHI.Name = "txtDIACHI";
-            this.txtDIACHI.Size = new System.Drawing.Size(272, 26);
+            this.txtDIACHI.Size = new System.Drawing.Size(272, 30);
             this.txtDIACHI.TabIndex = 2;
             // 
             // label7
@@ -541,21 +533,21 @@
             // txtTENNCC
             // 
             this.txtTENNCC.BackColor = System.Drawing.Color.White;
-            this.txtTENNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTENNCC.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtTENNCC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtTENNCC.Location = new System.Drawing.Point(137, 102);
             this.txtTENNCC.Name = "txtTENNCC";
-            this.txtTENNCC.Size = new System.Drawing.Size(272, 26);
+            this.txtTENNCC.Size = new System.Drawing.Size(272, 30);
             this.txtTENNCC.TabIndex = 1;
             // 
             // txtMANCC
             // 
             this.txtMANCC.BackColor = System.Drawing.Color.White;
-            this.txtMANCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMANCC.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtMANCC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtMANCC.Location = new System.Drawing.Point(137, 49);
             this.txtMANCC.Name = "txtMANCC";
-            this.txtMANCC.Size = new System.Drawing.Size(272, 26);
+            this.txtMANCC.Size = new System.Drawing.Size(272, 30);
             this.txtMANCC.TabIndex = 1;
             // 
             // label
@@ -580,12 +572,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163F));
             this.tableLayoutPanel3.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.groupBox3, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(457, 5);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(425, 5);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.40034F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(692, 451);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(868, 451);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // groupBox1
@@ -603,7 +595,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox1.Size = new System.Drawing.Size(521, 441);
+            this.groupBox1.Size = new System.Drawing.Size(697, 441);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bảng thông tin nhà cung cấp";
@@ -618,7 +610,7 @@
             this.flowLayoutPanel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 24);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(513, 412);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(689, 412);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -632,7 +624,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1154, 570);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1311, 570);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // entityCommand1
@@ -643,11 +635,37 @@
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
             // 
-            // thuêMượnToolStripMenuItem
+            // dataGridView1
             // 
-            this.thuêMượnToolStripMenuItem.Name = "thuêMượnToolStripMenuItem";
-            this.thuêMượnToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.thuêMượnToolStripMenuItem.Text = "Thuê mượn";
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(10)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(10)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.GridColor = System.Drawing.Color.Black;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 5);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dataGridView1.Size = new System.Drawing.Size(681, 402);
+            this.dataGridView1.TabIndex = 3;
             // 
             // DSNCC
             // 
@@ -655,7 +673,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1154, 570);
+            this.ClientSize = new System.Drawing.Size(1311, 570);
             this.Controls.Add(this.flowLayoutPanel1);
             this.DoubleBuffered = true;
             this.Name = "DSNCC";
@@ -665,7 +683,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -677,6 +694,7 @@
             this.groupBox1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -712,7 +730,6 @@
         private System.Windows.Forms.ToolStripMenuItem chiTiếtChiTiếuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chiTiếtThuVàoToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -733,5 +750,6 @@
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
         private System.Windows.Forms.ToolStripMenuItem nhàCungCấpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thuêMượnToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

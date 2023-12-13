@@ -184,7 +184,6 @@ namespace MUSICTALENT
         {
             if (txtMANC.Text != "")
             {
-                btnlammoi.Enabled = true;
                 string checkQuery = string.Format("SELECT COUNT(*) FROM NHACCU WHERE MANC like '{0}'", txtMANC.Text);
                 DataSet ds = kn.Laydulieu(checkQuery);
                 if (ds != null && ds.Tables.Count > 0)
@@ -398,6 +397,34 @@ namespace MUSICTALENT
         {
             Nhaccu NC = new Nhaccu();
             NC.Show();
+            this.Hide();
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DSNhanVien NV = new DSNhanVien();
+            NV.Show();
+            this.Hide();
+        }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DSKhachHang KH = new DSKhachHang();
+            KH.Show();
+            this.Hide();
+        }
+
+        private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DSNCC NCC = new DSNCC();
+            NCC.Show();
+            this.Hide();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dangnhap Login = new Dangnhap();
+            Login.Show();
             this.Hide();
         }
     }

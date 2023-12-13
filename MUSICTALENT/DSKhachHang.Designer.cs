@@ -34,7 +34,6 @@ namespace MUSICTALENT
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DSKhachHang));
             this.chiTiếtThuVàoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnsua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -43,18 +42,14 @@ namespace MUSICTALENT
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtDOANHSO = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtNGDK_MONTH = new System.Windows.Forms.TextBox();
-            this.txtNGDK_DAY = new System.Windows.Forms.TextBox();
+            this.txtNGDK = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDIACHI = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNGDK_YEAR = new System.Windows.Forms.TextBox();
-            this.txtNGSINH_YEAR = new System.Windows.Forms.TextBox();
-            this.txtNGSINH_MONTH = new System.Windows.Forms.TextBox();
-            this.txtNGSINH_DAY = new System.Windows.Forms.TextBox();
+            this.txtNGSINH = new System.Windows.Forms.TextBox();
             this.txtHOTEN = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMAKH = new System.Windows.Forms.TextBox();
@@ -88,7 +83,6 @@ namespace MUSICTALENT
             this.sốLiệuNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chiTiếtChiTiếuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dữLiệuNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -107,12 +101,6 @@ namespace MUSICTALENT
             this.chiTiếtThuVàoToolStripMenuItem.Name = "chiTiếtThuVàoToolStripMenuItem";
             this.chiTiếtThuVàoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.chiTiếtThuVàoToolStripMenuItem.Text = "Chi tiết thu vào";
-            // 
-            // đăngXuấtToolStripMenuItem1
-            // 
-            this.đăngXuấtToolStripMenuItem1.Name = "đăngXuấtToolStripMenuItem1";
-            this.đăngXuấtToolStripMenuItem1.Size = new System.Drawing.Size(207, 24);
-            this.đăngXuấtToolStripMenuItem1.Text = "Đăng xuất";
             // 
             // btnsua
             // 
@@ -205,18 +193,14 @@ namespace MUSICTALENT
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.txtDOANHSO);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtNGDK_MONTH);
-            this.groupBox2.Controls.Add(this.txtNGDK_DAY);
+            this.groupBox2.Controls.Add(this.txtNGDK);
             this.groupBox2.Controls.Add(this.txtSDT);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtDIACHI);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtNGDK_YEAR);
-            this.groupBox2.Controls.Add(this.txtNGSINH_YEAR);
-            this.groupBox2.Controls.Add(this.txtNGSINH_MONTH);
-            this.groupBox2.Controls.Add(this.txtNGSINH_DAY);
+            this.groupBox2.Controls.Add(this.txtNGSINH);
             this.groupBox2.Controls.Add(this.txtHOTEN);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtMAKH);
@@ -236,11 +220,11 @@ namespace MUSICTALENT
             // txtDOANHSO
             // 
             this.txtDOANHSO.BackColor = System.Drawing.Color.White;
-            this.txtDOANHSO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDOANHSO.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtDOANHSO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDOANHSO.Location = new System.Drawing.Point(137, 380);
             this.txtDOANHSO.Name = "txtDOANHSO";
-            this.txtDOANHSO.Size = new System.Drawing.Size(272, 26);
+            this.txtDOANHSO.Size = new System.Drawing.Size(272, 30);
             this.txtDOANHSO.TabIndex = 3;
             // 
             // label9
@@ -253,34 +237,24 @@ namespace MUSICTALENT
             this.label9.Text = "Doanh số:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtNGDK_MONTH
+            // txtNGDK
             // 
-            this.txtNGDK_MONTH.BackColor = System.Drawing.Color.White;
-            this.txtNGDK_MONTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNGDK_MONTH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNGDK_MONTH.Location = new System.Drawing.Point(234, 322);
-            this.txtNGDK_MONTH.Name = "txtNGDK_MONTH";
-            this.txtNGDK_MONTH.Size = new System.Drawing.Size(56, 26);
-            this.txtNGDK_MONTH.TabIndex = 3;
-            // 
-            // txtNGDK_DAY
-            // 
-            this.txtNGDK_DAY.BackColor = System.Drawing.Color.White;
-            this.txtNGDK_DAY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNGDK_DAY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNGDK_DAY.Location = new System.Drawing.Point(137, 324);
-            this.txtNGDK_DAY.Name = "txtNGDK_DAY";
-            this.txtNGDK_DAY.Size = new System.Drawing.Size(56, 26);
-            this.txtNGDK_DAY.TabIndex = 3;
+            this.txtNGDK.BackColor = System.Drawing.Color.White;
+            this.txtNGDK.Font = new System.Drawing.Font("Times New Roman", 15F);
+            this.txtNGDK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtNGDK.Location = new System.Drawing.Point(137, 324);
+            this.txtNGDK.Name = "txtNGDK";
+            this.txtNGDK.Size = new System.Drawing.Size(272, 30);
+            this.txtNGDK.TabIndex = 3;
             // 
             // txtSDT
             // 
             this.txtSDT.BackColor = System.Drawing.Color.White;
-            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtSDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSDT.Location = new System.Drawing.Point(137, 269);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(272, 26);
+            this.txtSDT.Size = new System.Drawing.Size(272, 30);
             this.txtSDT.TabIndex = 3;
             // 
             // label3
@@ -296,11 +270,11 @@ namespace MUSICTALENT
             // txtDIACHI
             // 
             this.txtDIACHI.BackColor = System.Drawing.Color.White;
-            this.txtDIACHI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDIACHI.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtDIACHI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDIACHI.Location = new System.Drawing.Point(137, 214);
             this.txtDIACHI.Name = "txtDIACHI";
-            this.txtDIACHI.Size = new System.Drawing.Size(272, 26);
+            this.txtDIACHI.Size = new System.Drawing.Size(272, 30);
             this.txtDIACHI.TabIndex = 2;
             // 
             // label7
@@ -333,54 +307,24 @@ namespace MUSICTALENT
             this.label4.Text = "Ngày sinh:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtNGDK_YEAR
+            // txtNGSINH
             // 
-            this.txtNGDK_YEAR.BackColor = System.Drawing.Color.White;
-            this.txtNGDK_YEAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNGDK_YEAR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNGDK_YEAR.Location = new System.Drawing.Point(333, 322);
-            this.txtNGDK_YEAR.Name = "txtNGDK_YEAR";
-            this.txtNGDK_YEAR.Size = new System.Drawing.Size(76, 26);
-            this.txtNGDK_YEAR.TabIndex = 1;
-            // 
-            // txtNGSINH_YEAR
-            // 
-            this.txtNGSINH_YEAR.BackColor = System.Drawing.Color.White;
-            this.txtNGSINH_YEAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNGSINH_YEAR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNGSINH_YEAR.Location = new System.Drawing.Point(333, 103);
-            this.txtNGSINH_YEAR.Name = "txtNGSINH_YEAR";
-            this.txtNGSINH_YEAR.Size = new System.Drawing.Size(76, 26);
-            this.txtNGSINH_YEAR.TabIndex = 1;
-            // 
-            // txtNGSINH_MONTH
-            // 
-            this.txtNGSINH_MONTH.BackColor = System.Drawing.Color.White;
-            this.txtNGSINH_MONTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNGSINH_MONTH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNGSINH_MONTH.Location = new System.Drawing.Point(234, 103);
-            this.txtNGSINH_MONTH.Name = "txtNGSINH_MONTH";
-            this.txtNGSINH_MONTH.Size = new System.Drawing.Size(56, 26);
-            this.txtNGSINH_MONTH.TabIndex = 1;
-            // 
-            // txtNGSINH_DAY
-            // 
-            this.txtNGSINH_DAY.BackColor = System.Drawing.Color.White;
-            this.txtNGSINH_DAY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNGSINH_DAY.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNGSINH_DAY.Location = new System.Drawing.Point(137, 103);
-            this.txtNGSINH_DAY.Name = "txtNGSINH_DAY";
-            this.txtNGSINH_DAY.Size = new System.Drawing.Size(56, 26);
-            this.txtNGSINH_DAY.TabIndex = 1;
+            this.txtNGSINH.BackColor = System.Drawing.Color.White;
+            this.txtNGSINH.Font = new System.Drawing.Font("Times New Roman", 15F);
+            this.txtNGSINH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtNGSINH.Location = new System.Drawing.Point(137, 103);
+            this.txtNGSINH.Name = "txtNGSINH";
+            this.txtNGSINH.Size = new System.Drawing.Size(272, 30);
+            this.txtNGSINH.TabIndex = 1;
             // 
             // txtHOTEN
             // 
             this.txtHOTEN.BackColor = System.Drawing.Color.White;
-            this.txtHOTEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHOTEN.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtHOTEN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtHOTEN.Location = new System.Drawing.Point(137, 157);
             this.txtHOTEN.Name = "txtHOTEN";
-            this.txtHOTEN.Size = new System.Drawing.Size(272, 26);
+            this.txtHOTEN.Size = new System.Drawing.Size(272, 30);
             this.txtHOTEN.TabIndex = 1;
             // 
             // label2
@@ -396,11 +340,11 @@ namespace MUSICTALENT
             // txtMAKH
             // 
             this.txtMAKH.BackColor = System.Drawing.Color.White;
-            this.txtMAKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMAKH.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.txtMAKH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtMAKH.Location = new System.Drawing.Point(137, 49);
             this.txtMAKH.Name = "txtMAKH";
-            this.txtMAKH.Size = new System.Drawing.Size(272, 26);
+            this.txtMAKH.Size = new System.Drawing.Size(272, 30);
             this.txtMAKH.TabIndex = 1;
             // 
             // label
@@ -495,7 +439,7 @@ namespace MUSICTALENT
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dataGridView1.Size = new System.Drawing.Size(748, 419);
+            this.dataGridView1.Size = new System.Drawing.Size(748, 402);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -640,6 +584,7 @@ namespace MUSICTALENT
             this.trangChủToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(109, 23);
             this.trangChủToolStripMenuItem.Text = "Trang chủ";
+            this.trangChủToolStripMenuItem.Click += new System.EventHandler(this.trangChủToolStripMenuItem_Click);
             // 
             // quảnLýNhạcCụToolStripMenuItem
             // 
@@ -659,24 +604,28 @@ namespace MUSICTALENT
             this.nhạcCụToolStripMenuItem.Name = "nhạcCụToolStripMenuItem";
             this.nhạcCụToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.nhạcCụToolStripMenuItem.Text = "Nhạc cụ";
+            this.nhạcCụToolStripMenuItem.Click += new System.EventHandler(this.nhạcCụToolStripMenuItem_Click);
             // 
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
             this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
+            this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // kháchHàngToolStripMenuItem
             // 
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
             this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
+            this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
             // 
             // nhàCungCấpToolStripMenuItem
             // 
             this.nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
             this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.nhàCungCấpToolStripMenuItem.Text = "Nhà cung cấp";
+            this.nhàCungCấpToolStripMenuItem.Click += new System.EventHandler(this.nhàCungCấpToolStripMenuItem_Click);
             // 
             // giấyTờToolStripMenuItem
             // 
@@ -753,19 +702,11 @@ namespace MUSICTALENT
             // 
             // đăngXuấtToolStripMenuItem
             // 
-            this.đăngXuấtToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dữLiệuNgườiDùngToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem1});
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
             this.đăngXuấtToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(161, 23);
-            this.đăngXuấtToolStripMenuItem.Text = "Thông tin cá nhân";
-            // 
-            // dữLiệuNgườiDùngToolStripMenuItem
-            // 
-            this.dữLiệuNgườiDùngToolStripMenuItem.Name = "dữLiệuNgườiDùngToolStripMenuItem";
-            this.dữLiệuNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.dữLiệuNgườiDùngToolStripMenuItem.Text = "Dữ liệu người dùng";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(112, 23);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // DSKhachHang
             // 
@@ -804,7 +745,6 @@ namespace MUSICTALENT
         #endregion
 
         private System.Windows.Forms.ToolStripMenuItem chiTiếtThuVàoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem1;
         private System.Windows.Forms.Button btnsua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -813,14 +753,14 @@ namespace MUSICTALENT
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtDOANHSO;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtNGDK_DAY;
+        private System.Windows.Forms.TextBox txtNGDK;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDIACHI;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNGSINH_DAY;
+        private System.Windows.Forms.TextBox txtNGSINH;
         private System.Windows.Forms.TextBox txtHOTEN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMAKH;
@@ -850,14 +790,9 @@ namespace MUSICTALENT
         private System.Windows.Forms.ToolStripMenuItem sốLiệuNhậpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chiTiếtChiTiếuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dữLiệuNgườiDùngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhàCungCấpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thuêMượnToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private TextBox txtNGSINH_YEAR;
-        private TextBox txtNGSINH_MONTH;
-        private TextBox txtNGDK_MONTH;
-        private TextBox txtNGDK_YEAR;
     }
 }

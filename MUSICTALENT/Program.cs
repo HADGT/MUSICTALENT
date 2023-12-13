@@ -16,7 +16,7 @@ namespace MUSICTALENT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DSKhachHang());
+            Application.Run(new Dangnhap());
         }
     }
 }

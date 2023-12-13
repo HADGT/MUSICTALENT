@@ -36,13 +36,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnthoat
             // 
-            resources.ApplyResources(this.btnthoat, "btnthoat");
             this.btnthoat.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnthoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnthoat, "btnthoat");
             this.btnthoat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.UseVisualStyleBackColor = false;
@@ -50,9 +51,9 @@
             // 
             // btndangnhap
             // 
-            resources.ApplyResources(this.btndangnhap, "btndangnhap");
             this.btndangnhap.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btndangnhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btndangnhap, "btndangnhap");
             this.btndangnhap.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btndangnhap.Name = "btndangnhap";
             this.btndangnhap.UseVisualStyleBackColor = false;
@@ -89,6 +90,12 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Name = "label1";
             // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
             // Dangnhap
             // 
             resources.ApplyResources(this, "$this");
@@ -97,6 +104,7 @@
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btndangnhap);
             this.Controls.Add(this.txtmatkhau);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txttaikhoan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -122,5 +130,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -52,10 +52,8 @@ namespace MUSICTALENT
             if (SL == 1)
             {
                 MessageBox.Show("Đăng nhập thành công");
-                //khởi tạo đối tượng của frmdangnhap
-                frmMain frm = new frmMain();
-                //Hiển thị đối tượng lên màn hình
-                frm.Show();
+                frmMain frmAdmin = new frmMain();
+                frmAdmin.Show(); 
                 this.Hide();
             }
             else

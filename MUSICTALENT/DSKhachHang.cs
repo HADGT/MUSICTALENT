@@ -23,12 +23,8 @@ namespace MUSICTALENT
             CheckTextboxes(); // Kiểm tra ngay khi form được khởi tạo
             txtMAKH.TextChanged += new EventHandler(txtMAKH_TextChanged);
             txtHOTEN.TextChanged += new EventHandler(txtHOTEN_TextChanged);
-            txtNGSINH_DAY.TextChanged += new EventHandler(txtNGSINH_DAY_TextChanged);
-            txtNGSINH_MONTH.TextChanged += new EventHandler(txtNGSINH_MONTH_TextChanged);
-            txtNGSINH_YEAR.TextChanged += new EventHandler(txtNGSINH_YEAR_TextChanged);
-            txtNGDK_DAY.TextChanged += new EventHandler(txtNGDK_DAY_TextChanged);
-            txtNGDK_MONTH.TextChanged += new EventHandler(txtNGDK_MONTH_TextChanged);
-            txtNGDK_YEAR.TextChanged += new EventHandler(txtNGDK_YEAR_TextChanged);
+            txtNGSINH.TextChanged += new EventHandler(txtNGSINH_TextChanged);
+            txtNGDK.TextChanged += new EventHandler(txtNGDK_TextChanged);
             txtSDT.TextChanged += new EventHandler(txtSDT_TextChanged);
             txtDIACHI.TextChanged += new EventHandler(txtDIACHI_TextChanged);
             txtDOANHSO.TextChanged += new EventHandler(txtDOANHSO_TextChanged);
@@ -41,12 +37,8 @@ namespace MUSICTALENT
             CheckTextboxes(); // Kiểm tra ngay khi form được khởi tạo
             txtMAKH.TextChanged += new EventHandler(txtMAKH_TextChanged);
             txtHOTEN.TextChanged += new EventHandler(txtHOTEN_TextChanged);
-            txtNGSINH_DAY.TextChanged += new EventHandler(txtNGSINH_DAY_TextChanged);
-            txtNGSINH_MONTH.TextChanged += new EventHandler(txtNGSINH_MONTH_TextChanged);
-            txtNGSINH_YEAR.TextChanged += new EventHandler(txtNGSINH_YEAR_TextChanged);
-            txtNGDK_DAY.TextChanged += new EventHandler(txtNGDK_DAY_TextChanged);
-            txtNGDK_MONTH.TextChanged += new EventHandler(txtNGDK_MONTH_TextChanged);
-            txtNGDK_YEAR.TextChanged += new EventHandler(txtNGDK_YEAR_TextChanged);
+            txtNGSINH.TextChanged += new EventHandler(txtNGSINH_TextChanged);
+            txtNGDK.TextChanged += new EventHandler(txtNGDK_TextChanged);
             txtSDT.TextChanged += new EventHandler(txtSDT_TextChanged);
             txtDIACHI.TextChanged += new EventHandler(txtDIACHI_TextChanged);
             txtDOANHSO.TextChanged += new EventHandler(txtDOANHSO_TextChanged);
@@ -55,15 +47,11 @@ namespace MUSICTALENT
         public void cleartext()
         {
             txtMAKH.Text = "";
-            txtNGSINH_DAY.Text = "";
-            txtNGSINH_MONTH.Text = "";
-            txtNGSINH_YEAR.Text = "";
+            txtNGSINH.Text = "";
             txtHOTEN.Text = "";
             txtDIACHI.Text = "";
             txtSDT.Text = "";
-            txtNGDK_DAY.Text = "";
-            txtNGDK_MONTH.Text = "";
-            txtNGDK_YEAR.Text = "";
+            txtNGDK.Text = "";
             txtDOANHSO.Text = "";
             btnThem.Enabled = true;
             btnsua.Enabled = true;
@@ -133,7 +121,7 @@ namespace MUSICTALENT
 
         private void CheckTextboxes()
         {
-            if (string.IsNullOrWhiteSpace(txtMAKH.Text) && string.IsNullOrWhiteSpace(txtHOTEN.Text) && string.IsNullOrWhiteSpace(txtNGSINH_DAY.Text) && string.IsNullOrWhiteSpace(txtNGSINH_MONTH.Text) && string.IsNullOrWhiteSpace(txtNGSINH_YEAR.Text) && string.IsNullOrWhiteSpace(txtSDT.Text) && string.IsNullOrWhiteSpace(txtDIACHI.Text) && string.IsNullOrWhiteSpace(txtNGDK_DAY.Text) && string.IsNullOrWhiteSpace(txtNGDK_MONTH.Text) && string.IsNullOrWhiteSpace(txtNGDK_YEAR.Text) && string.IsNullOrWhiteSpace(txtDOANHSO.Text))
+            if (string.IsNullOrWhiteSpace(txtMAKH.Text) && string.IsNullOrWhiteSpace(txtHOTEN.Text) && string.IsNullOrWhiteSpace(txtNGSINH.Text) && string.IsNullOrWhiteSpace(txtSDT.Text) && string.IsNullOrWhiteSpace(txtDIACHI.Text) && string.IsNullOrWhiteSpace(txtNGDK.Text) && string.IsNullOrWhiteSpace(txtDOANHSO.Text))
             {
                 btnLammoi.Enabled = false;
             }
@@ -148,17 +136,7 @@ namespace MUSICTALENT
             CheckTextboxes();
         }
 
-        private void txtNGSINH_DAY_TextChanged(object sender, EventArgs e)
-        {
-            CheckTextboxes();
-        }
-
-        private void txtNGSINH_MONTH_TextChanged(object sender, EventArgs e)
-        {
-            CheckTextboxes();
-        }
-
-        private void txtNGSINH_YEAR_TextChanged(object sender, EventArgs e)
+        private void txtNGSINH_TextChanged(object sender, EventArgs e)
         {
             CheckTextboxes();
         }
@@ -178,17 +156,7 @@ namespace MUSICTALENT
             CheckTextboxes();
         }
 
-        private void txtNGDK_DAY_TextChanged(object sender, EventArgs e)
-        {
-            CheckTextboxes();
-        }
-
-        private void txtNGDK_MONTH_TextChanged(object sender, EventArgs e)
-        {
-            CheckTextboxes();
-        }
-
-        private void txtNGDK_YEAR_TextChanged(object sender, EventArgs e)
+        private void txtNGDK_TextChanged(object sender, EventArgs e)
         {
             CheckTextboxes();
         }
@@ -211,46 +179,10 @@ namespace MUSICTALENT
                 btnTimkiem.Enabled = true;
                 txtMAKH.Text = dataGridView1.Rows[r].Cells["MAKH"].Value.ToString();
                 txtHOTEN.Text = dataGridView1.Rows[r].Cells["HOTEN"].Value.ToString();
-                if (dataGridView1.CurrentRow != null)
-                {
-                    int selectedRow = dataGridView1.CurrentRow.Index;
-
-                    if (dataGridView1.Rows[selectedRow].Cells["NGSINH"].Value != null)
-                    {
-                        DateTime dateValue = (DateTime)dataGridView1.Rows[selectedRow].Cells["NGSINH"].Value;
-
-                        // Lấy ngày, tháng và năm từ giá trị DateTime
-                        int day = dateValue.Day;
-                        int month = dateValue.Month;
-                        int year = dateValue.Year;
-
-                        // Gán giá trị vào các TextBox tương ứng
-                        txtNGSINH_DAY.Text = day.ToString();
-                        txtNGSINH_MONTH.Text = month.ToString();
-                        txtNGSINH_YEAR.Text = year.ToString();
-                    }
-                }
+                txtNGSINH.Text = dataGridView1.Rows[r].Cells["NGSINH"].Value.ToString();
                 txtDIACHI.Text = dataGridView1.Rows[r].Cells["DCHI"].Value.ToString();
                 txtSDT.Text = dataGridView1.Rows[r].Cells["SDT"].Value.ToString();
-                if (dataGridView1.CurrentRow != null)
-                {
-                    int selectedRow = dataGridView1.CurrentRow.Index;
-
-                    if (dataGridView1.Rows[selectedRow].Cells["NGDKY"].Value != null)
-                    {
-                        DateTime dateValue = (DateTime)dataGridView1.Rows[selectedRow].Cells["NGDKY"].Value;
-
-                        // Lấy ngày, tháng và năm từ giá trị DateTime
-                        int day = dateValue.Day;
-                        int month = dateValue.Month;
-                        int year = dateValue.Year;
-
-                        // Gán giá trị vào các TextBox tương ứng
-                        txtNGDK_DAY.Text = day.ToString();
-                        txtNGDK_MONTH.Text = month.ToString();
-                        txtNGDK_YEAR.Text = year.ToString();
-                    }
-                }
+                txtNGDK.Text = dataGridView1.Rows[r].Cells["NGDKY"].Value.ToString();
                 txtDOANHSO.Text = dataGridView1.Rows[r].Cells["DOANHSO"].Value.ToString();
             }
         }
@@ -259,7 +191,6 @@ namespace MUSICTALENT
         {
             if (txtMAKH.Text != "")
             {
-                btnLammoi.Enabled = true;
                 // Kiểm tra xem ngày hiện tại là ngày bắt đầu của ngày tháng năm hay chỉ ngày trong dữ liệu
                 DateTime currentDate = DateTime.Now.Date;
                 string checkQuery = string.Format("SELECT COUNT(*) FROM KHACHHANG WHERE MAKH like '{0}'", txtMAKH.Text);
@@ -276,9 +207,9 @@ namespace MUSICTALENT
                     {
                         if (int.TryParse(txtSDT.Text, out int sdt))
                         {
-                            if (DateTime.TryParseExact($"{txtNGSINH_DAY.Text}/{txtNGSINH_MONTH.Text}/{txtNGSINH_YEAR.Text}", new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "d/M/yyyy", "d/MM/yyyy", "dd/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngsinh))
+                            if (DateTime.TryParseExact(txtNGSINH.Text, new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "d/M/yyyy", "d/MM/yyyy", "dd/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngsinh))
                             {
-                                if (DateTime.TryParseExact($"{txtNGDK_DAY.Text}/{txtNGDK_MONTH.Text}/{txtNGDK_YEAR.Text}", new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "d/M/yyyy", "d/MM/yyyy", "dd/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngdky))
+                                if (DateTime.TryParseExact(txtNGDK.Text, new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "d/M/yyyy", "d/MM/yyyy", "dd/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngdky))
                                 {
                                     if (int.TryParse(txtDOANHSO.Text, out int doanhso))
                                     {
@@ -329,8 +260,6 @@ namespace MUSICTALENT
             }
         }
 
-
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -340,7 +269,6 @@ namespace MUSICTALENT
         {
             if (txtMAKH.Text != "")
             {
-                btnLammoi.Enabled = true;
                 DateTime currentDate = DateTime.Now.Date;
                 string checkQuery = string.Format("SELECT COUNT(*) FROM KHACHHANG WHERE MAKH like '{0}'", txtMAKH.Text);
                 DataSet ds = kn.Laydulieu(checkQuery);
@@ -352,9 +280,9 @@ namespace MUSICTALENT
                     {
                         if (int.TryParse(txtSDT.Text, out int sdt))
                         {
-                            if (DateTime.TryParseExact($"{txtNGSINH_DAY.Text}/{txtNGSINH_MONTH.Text}/{txtNGSINH_YEAR.Text}", new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "d/M/yyyy", "d/MM/yyyy", "dd/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngsinh))
+                            if (DateTime.TryParseExact(txtNGSINH.Text, new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "d/M/yyyy", "d/MM/yyyy", "dd/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngsinh))
                             {
-                                if (DateTime.TryParseExact($"{txtNGDK_DAY.Text}/{txtNGDK_MONTH.Text}/{txtNGDK_YEAR.Text}", new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "d/M/yyyy", "d/MM/yyyy", "dd/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngdky))
+                                if (DateTime.TryParseExact(txtNGDK.Text, new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "d/M/yyyy", "d/MM/yyyy", "dd/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngdky))
                                 {
                                     if (ngsinh < currentDate && ngdky < currentDate && ngsinh < ngdky)
                                     {
@@ -456,12 +384,8 @@ namespace MUSICTALENT
             CheckTextboxes(); // Kiểm tra ngay khi form được khởi tạo
             txtMAKH.TextChanged += new EventHandler(txtMAKH_TextChanged);
             txtHOTEN.TextChanged += new EventHandler(txtHOTEN_TextChanged);
-            txtNGSINH_DAY.TextChanged += new EventHandler(txtNGSINH_DAY_TextChanged);
-            txtNGSINH_MONTH.TextChanged += new EventHandler(txtNGSINH_MONTH_TextChanged);
-            txtNGSINH_YEAR.TextChanged += new EventHandler(txtNGSINH_YEAR_TextChanged);
-            txtNGDK_DAY.TextChanged += new EventHandler(txtNGDK_DAY_TextChanged);
-            txtNGDK_MONTH.TextChanged += new EventHandler(txtNGDK_MONTH_TextChanged);
-            txtNGDK_YEAR.TextChanged += new EventHandler(txtNGDK_YEAR_TextChanged);
+            txtNGSINH.TextChanged += new EventHandler(txtNGSINH_TextChanged);
+            txtNGDK.TextChanged += new EventHandler(txtNGDK_TextChanged);
             txtSDT.TextChanged += new EventHandler(txtSDT_TextChanged);
             txtDIACHI.TextChanged += new EventHandler(txtDIACHI_TextChanged);
             txtDOANHSO.TextChanged += new EventHandler(txtDOANHSO_TextChanged);
@@ -469,11 +393,9 @@ namespace MUSICTALENT
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
-            if (txtMAKH.Text != "" || txtHOTEN.Text != "" || txtNGSINH_DAY.Text != "" || txtNGSINH_MONTH.Text != "" || txtNGSINH_YEAR.Text != "" || txtDIACHI.Text != "" || txtSDT.Text != "" || txtNGDK_DAY.Text != "" || txtNGDK_MONTH.Text != "" || txtNGDK_YEAR.Text != "" || txtDOANHSO.Text != "")
+            if (txtMAKH.Text != "" || txtHOTEN.Text != "" || txtNGSINH.Text != "" || txtDIACHI.Text != "" || txtSDT.Text != "" || txtNGDK.Text != "" || txtDOANHSO.Text != "")
             {
-                btnLammoi.Enabled = true;
-
-                string query = string.Format("SELECT MAKH, HOTEN, NGSINH, DIACHI, SDT, NGDKY, DOANHSO FROM KHACHHANG WHERE 1=1");
+                string query = string.Format("SELECT MAKH, HOTEN, NGSINH, DCHI, SDT, NGDKY, DOANHSO FROM KHACHHANG WHERE 1=1");
 
                 if (!string.IsNullOrWhiteSpace(txtMAKH.Text))
                 {
@@ -483,27 +405,21 @@ namespace MUSICTALENT
                 {
                     query += $"AND HOTEN LIKE N'{txtHOTEN.Text}' ";
                 }
-                if (!string.IsNullOrWhiteSpace(txtNGSINH_DAY.Text) && !string.IsNullOrWhiteSpace(txtNGSINH_MONTH.Text) && !string.IsNullOrWhiteSpace(txtNGSINH_YEAR.Text))
+                if (!string.IsNullOrWhiteSpace(txtNGSINH.Text))
                 {
-                    if (DateTime.TryParseExact($"{txtNGSINH_DAY.Text}/{txtNGSINH_MONTH.Text}/{txtNGSINH_YEAR.Text}", new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "d/M/yyyy", "d/MM/yyyy", "dd/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngsinh))
-                    {
-                        query += $"AND YEAR(NGSINH) = {ngsinh.Year} OR MONTH(NGSINH) = {ngsinh.Month} OR DAY(NGSINH) = {ngsinh.Day} ";
-                    }
+                    query += $"AND NGSINH = '{txtNGSINH.Text}' ";
                 }
                 if (!string.IsNullOrWhiteSpace(txtDIACHI.Text))
                 {
-                    query += $"AND DIACHI LIKE N'{txtDIACHI.Text}' ";
+                    query += $"AND DCHI LIKE N'{txtDIACHI.Text}' ";
                 }
                 if (!string.IsNullOrWhiteSpace(txtSDT.Text))
                 {
                     query += $"AND SDT = '{txtSDT.Text}' ";
                 }
-                if (!string.IsNullOrWhiteSpace(txtNGDK_DAY.Text) && !string.IsNullOrWhiteSpace(txtNGDK_MONTH.Text) && !string.IsNullOrWhiteSpace(txtNGDK_YEAR.Text))
+                if (!string.IsNullOrWhiteSpace(txtNGDK.Text))
                 {
-                    if (DateTime.TryParseExact($"{txtNGDK_DAY.Text}/{txtNGDK_MONTH.Text}/{txtNGDK_YEAR.Text}", new string[] { "dd/MM/yyyy", "dd-MM-yyyy", "d/M/yyyy", "d/MM/yyyy", "dd/M/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime ngdky))
-                    {
-                        query += $"AND YEAR(NGDKY) = {ngdky.Year} OR MONTH(NGDKY) = {ngdky.Month} OR DAY(NGDKY) = {ngdky.Day} ";
-                    }
+                    query += $"AND NGDKY = '{txtNGDK.Text}' ";
                 }
                 if (!string.IsNullOrWhiteSpace(txtDOANHSO.Text))
                 {
@@ -562,6 +478,48 @@ namespace MUSICTALENT
             {
                 MessageBox.Show("Vui lòng điền thông tin muốn tìm kiếm!");
             }
+        }
+
+        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMain frm = new frmMain();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void nhạcCụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Nhaccu NC = new Nhaccu();
+            NC.Show();
+            this.Hide();
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DSNhanVien NV = new DSNhanVien();
+            NV.Show();
+            this.Hide();
+        }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DSKhachHang KH = new DSKhachHang();
+            KH.Show();
+            this.Hide();
+        }
+
+        private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DSNCC NCC = new DSNCC();
+            NCC.Show();
+            this.Hide();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dangnhap Login = new Dangnhap();
+            Login.Show();
+            this.Hide();
         }
     }
 }

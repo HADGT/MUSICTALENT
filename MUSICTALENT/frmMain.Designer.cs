@@ -217,6 +217,7 @@ namespace MUSICTALENT
             this.đăngXuấtToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(112, 23);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click_1);
             // 
             // pictureBox1
             // 

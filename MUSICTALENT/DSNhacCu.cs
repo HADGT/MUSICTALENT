@@ -280,7 +280,7 @@ namespace MUSICTALENT
                     {
                         if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            string query = string.Format("DELETE FROM NHACCU WHERE MANC='{0}'",
+                            string query = string.Format("DELETE FROM NHACCU WHERE MANC like '{0}'",
                             txtMANC.Text);
                             bool kq = kn.Thucthi(query);
                             if (kq)
@@ -323,60 +323,64 @@ namespace MUSICTALENT
         {
             if (txtMANC.Text != "" || txtTENNC.Text != "" || txtSOLUONG.Text != "" || txtGHICHU.Text != "" || txtGIA.Text != "")
             {
-                string query = string.Format("SELECT COUNT(*) FROM NHACCU, DONVITINH WHERE NHACCU.MADVT = DONVITINH.MADVT AND (MANC like '{0}' or TENNC LIKE N'{1}' or SOLUONG = '{2}' or GHICHU LIKE N'{3}' or GIA = '{4}')",
-                    txtMANC.Text,
-                    txtTENNC.Text,
-                    txtSOLUONG.Text,
-                    txtGHICHU.Text,
-                    txtGIA.Text);
+                string query = string.Format("SELECT MANC, TENNC, SOLUONG, TENDVT, GHICHU, GIA FROM NHACCU, DONVITINH WHERE NHACCU.MADVT = DONVITINH.MADVT AND 1=1 ");
 
-                int count = Convert.ToInt32(kn.Laydulieu(query).Tables[0].Rows[0][0]);
-
-                if (count > 0)
+                if (!string.IsNullOrWhiteSpace(txtMANC.Text))
                 {
-                    query = string.Format("SELECT MANC, TENNC, SOLUONG, TENDVT, GHICHU, GIA FROM NHACCU, DONVITINH WHERE NHACCU.MADVT = DONVITINH.MADVT AND (MANC like '{0}' or TENNC LIKE N'{1}' or SOLUONG = '{2}' or GHICHU LIKE N'{3}' or GIA = '{4}')",
-                        txtMANC.Text,
-                        txtTENNC.Text,
-                        txtSOLUONG.Text,
-                        txtGHICHU.Text,
-                        txtGIA.Text);
+                    query += $"AND MANC LIKE '{txtMANC.Text}' ";
+                }
+                if (!string.IsNullOrWhiteSpace(txtTENNC.Text))
+                {
+                    query += $"AND TENNC LIKE N'%{txtTENNC.Text}%' ";
+                }
+                if (!string.IsNullOrWhiteSpace(txtSOLUONG.Text))
+                {
+                    query += $"AND SOLUONG = '{txtSOLUONG.Text}' ";
+                }
+                if (!string.IsNullOrWhiteSpace(txtGHICHU.Text))
+                {
+                    query += $"AND GHICHU LIKE N'%{txtGHICHU.Text}%' ";
+                }
+                if (!string.IsNullOrWhiteSpace(txtGIA.Text))
+                {
+                    query += $"AND GIA = '{txtGIA.Text}' ";
+                }
 
-                    DataSet ds = kn.Laydulieu(query);
+                DataSet ds = kn.Laydulieu(query);
 
-                    if (ds != null && ds.Tables.Count > 0)
-                    {
-                        dataGridView1.DataSource = ds.Tables[0];
-                        // Đặt WrapMode của tiêu đề cột trong DataGridView để nó không wrap (không xuống dòng)
-                        dataGridView1.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
+                if (ds != null && ds.Tables.Count > 0)
+                {
+                    dataGridView1.DataSource = ds.Tables[0];
+                    // Đặt WrapMode của tiêu đề cột trong DataGridView để nó không wrap (không xuống dòng)
+                    dataGridView1.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
 
-                        // Đặt ColumnHeadersHeightSizeMode của DataGridView để tiêu đề cột hiển thị trên cùng một hàng
-                        dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-                        dataGridView1.ColumnHeadersHeight = 35; // Thiết lập chiều cao cho tiêu đề cột
+                    // Đặt ColumnHeadersHeightSizeMode của DataGridView để tiêu đề cột hiển thị trên cùng một hàng
+                    dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+                    dataGridView1.ColumnHeadersHeight = 35; // Thiết lập chiều cao cho tiêu đề cột
 
-                        dataGridView1.Columns[0].HeaderText = "Mã nhạc cụ";
-                        dataGridView1.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                        dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                        dataGridView1.Columns[1].HeaderText = "Tên nhạc cụ";
-                        // Đặt nội dung của cột "Họ tên" sang trái
-                        dataGridView1.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                        dataGridView1.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                        dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                        dataGridView1.Columns[2].HeaderText = "Số lượng";
-                        dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                        dataGridView1.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                        dataGridView1.Columns[3].HeaderText = "Tên mã đơn vị tính";
-                        dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                        dataGridView1.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                        dataGridView1.Columns[4].HeaderText = "Ghi chú";
-                        dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                        dataGridView1.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                        dataGridView1.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                        dataGridView1.Columns[5].HeaderText = "Giá";
-                        dataGridView1.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                        dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dataGridView1.Columns[0].HeaderText = "Mã nhạc cụ";
+                    dataGridView1.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dataGridView1.Columns[1].HeaderText = "Tên nhạc cụ";
+                    // Đặt nội dung của cột "Họ tên" sang trái
+                    dataGridView1.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dataGridView1.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dataGridView1.Columns[2].HeaderText = "Số lượng";
+                    dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dataGridView1.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dataGridView1.Columns[3].HeaderText = "Tên mã đơn vị tính";
+                    dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dataGridView1.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dataGridView1.Columns[4].HeaderText = "Ghi chú";
+                    dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dataGridView1.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                    dataGridView1.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dataGridView1.Columns[5].HeaderText = "Giá";
+                    dataGridView1.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
-                        dataGridView1.MouseWheel += DataGridView1_MouseWheel; // Gán sự kiện MouseWheel cho DataGridView
-                    }
+                    dataGridView1.MouseWheel += DataGridView1_MouseWheel; // Gán sự kiện MouseWheel cho DataGridView
                 }
                 else
                 {

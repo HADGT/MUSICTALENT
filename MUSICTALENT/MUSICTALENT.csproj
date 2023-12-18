@@ -114,6 +114,12 @@
     <Compile Include="Dangnhap.Designer.cs">
       <DependentUpon>DANGNHAP.cs</DependentUpon>
     </Compile>
+    <Compile Include="DSChucVuvaDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSChucVuvaDVT.Designer.cs">
+      <DependentUpon>DSChucVuvaDVT.cs</DependentUpon>
+    </Compile>
     <Compile Include="DSKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DANGNHAP.resx">
       <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSChucVuvaDVT.resx">
+      <DependentUpon>DSChucVuvaDVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DSKhachHang.resx">
       <DependentUpon>DSKhachHang.cs</DependentUpon>

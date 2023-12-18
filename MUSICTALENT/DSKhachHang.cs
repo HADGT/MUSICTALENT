@@ -403,7 +403,7 @@ namespace MUSICTALENT
                 }
                 if (!string.IsNullOrWhiteSpace(txtHOTEN.Text))
                 {
-                    query += $"AND HOTEN LIKE N'{txtHOTEN.Text}' ";
+                    query += $"AND HOTEN LIKE N'%{txtHOTEN.Text}%' ";
                 }
                 if (!string.IsNullOrWhiteSpace(txtNGSINH.Text))
                 {
@@ -411,7 +411,7 @@ namespace MUSICTALENT
                 }
                 if (!string.IsNullOrWhiteSpace(txtDIACHI.Text))
                 {
-                    query += $"AND DCHI LIKE N'{txtDIACHI.Text}' ";
+                    query += $"AND DCHI LIKE N'%{txtDIACHI.Text}%' ";
                 }
                 if (!string.IsNullOrWhiteSpace(txtSDT.Text))
                 {

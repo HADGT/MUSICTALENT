@@ -54,7 +54,8 @@ namespace MUSICTALENT
             NCC.Show();
             this.Hide();
         }
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void đăngXuấtToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Dangnhap Login = new Dangnhap();
             Login.Show();

@@ -106,7 +106,7 @@ namespace MUSICTALENT
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1326, 596);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1326, 639);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -124,10 +124,10 @@ namespace MUSICTALENT
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 576F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 543F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1363, 573);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1363, 629);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -141,12 +141,12 @@ namespace MUSICTALENT
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 930F));
             this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 115);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 148);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1355, 552);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1355, 533);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // groupBox2
@@ -173,7 +173,7 @@ namespace MUSICTALENT
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(417, 446);
+            this.groupBox2.Size = new System.Drawing.Size(417, 476);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhạc cụ";
@@ -315,7 +315,7 @@ namespace MUSICTALENT
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.40034F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(922, 542);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(922, 523);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // groupBox1
@@ -333,7 +333,7 @@ namespace MUSICTALENT
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox1.Size = new System.Drawing.Size(708, 532);
+            this.groupBox1.Size = new System.Drawing.Size(708, 513);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bảng thông tin nhạc cụ";
@@ -348,7 +348,7 @@ namespace MUSICTALENT
             this.flowLayoutPanel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 24);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(700, 503);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(700, 484);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // dataGridView1
@@ -380,7 +380,7 @@ namespace MUSICTALENT
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dataGridView1.Size = new System.Drawing.Size(692, 419);
+            this.dataGridView1.Size = new System.Drawing.Size(692, 433);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -397,7 +397,7 @@ namespace MUSICTALENT
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox3.Size = new System.Drawing.Size(160, 452);
+            this.groupBox3.Size = new System.Drawing.Size(160, 471);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
@@ -418,7 +418,7 @@ namespace MUSICTALENT
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(9, 5, 9, 5);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(10, 20, 20, 10);
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(152, 423);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(152, 442);
             this.flowLayoutPanel3.TabIndex = 0;
             this.flowLayoutPanel3.WrapContents = false;
             // 
@@ -524,7 +524,7 @@ namespace MUSICTALENT
             this.label1.Location = new System.Drawing.Point(4, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1355, 76);
+            this.label1.Size = new System.Drawing.Size(1355, 109);
             this.label1.TabIndex = 2;
             this.label1.Text = "THÔNG TIN NHẠC CỤ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -695,7 +695,7 @@ namespace MUSICTALENT
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1326, 596);
+            this.ClientSize = new System.Drawing.Size(1326, 639);
             this.Controls.Add(this.flowLayoutPanel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

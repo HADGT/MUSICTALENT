@@ -34,7 +34,7 @@ namespace MUSICTALENT
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nhaccu));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -67,6 +67,7 @@ namespace MUSICTALENT
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhạcCụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhạcCụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chứcVụVàDVTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhàCungCấpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +83,10 @@ namespace MUSICTALENT
             this.chiTiếtChiTiếuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chiTiếtThuVàoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -95,40 +99,45 @@ namespace MUSICTALENT
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // splitContainer1
             // 
-            this.flowLayoutPanel1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1326, 639);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.splitContainer1.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.menuStrip1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer1.Size = new System.Drawing.Size(1326, 651);
+            this.splitContainer1.SplitterDistance = 35;
+            this.splitContainer1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 543F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1363, 629);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1326, 612);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -138,15 +147,16 @@ namespace MUSICTALENT
             this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 930F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 882F));
             this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 148);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 114);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1355, 533);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1318, 491);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // groupBox2
@@ -173,7 +183,7 @@ namespace MUSICTALENT
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(417, 476);
+            this.groupBox2.Size = new System.Drawing.Size(428, 476);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhạc cụ";
@@ -307,21 +317,19 @@ namespace MUSICTALENT
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
             this.tableLayoutPanel3.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.groupBox3, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(429, 5);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(440, 5);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.40034F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(922, 523);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(874, 481);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.flowLayoutPanel2);
@@ -333,7 +341,7 @@ namespace MUSICTALENT
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox1.Size = new System.Drawing.Size(708, 513);
+            this.groupBox1.Size = new System.Drawing.Size(700, 471);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bảng thông tin nhạc cụ";
@@ -348,7 +356,7 @@ namespace MUSICTALENT
             this.flowLayoutPanel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 24);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(700, 484);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(692, 442);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // dataGridView1
@@ -380,9 +388,8 @@ namespace MUSICTALENT
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dataGridView1.Size = new System.Drawing.Size(692, 433);
+            this.dataGridView1.Size = new System.Drawing.Size(684, 432);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox3
             // 
@@ -392,12 +399,12 @@ namespace MUSICTALENT
             this.groupBox3.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(10)));
-            this.groupBox3.Location = new System.Drawing.Point(720, 5);
+            this.groupBox3.Location = new System.Drawing.Point(712, 5);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox3.Size = new System.Drawing.Size(160, 471);
+            this.groupBox3.Size = new System.Drawing.Size(158, 471);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
@@ -418,7 +425,7 @@ namespace MUSICTALENT
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(9, 5, 9, 5);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(10, 20, 20, 10);
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(152, 442);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(150, 442);
             this.flowLayoutPanel3.TabIndex = 0;
             this.flowLayoutPanel3.WrapContents = false;
             // 
@@ -436,7 +443,6 @@ namespace MUSICTALENT
             this.btnThem.Text = "Thêm mới";
             this.btnThem.UseCompatibleTextRendering = true;
             this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnsua
             // 
@@ -451,7 +457,6 @@ namespace MUSICTALENT
             this.btnsua.TabIndex = 2;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = false;
-            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnxoa
             // 
@@ -466,7 +471,6 @@ namespace MUSICTALENT
             this.btnxoa.TabIndex = 1;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = false;
-            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnlammoi
             // 
@@ -481,7 +485,6 @@ namespace MUSICTALENT
             this.btnlammoi.TabIndex = 1;
             this.btnlammoi.Text = "Làm mới";
             this.btnlammoi.UseVisualStyleBackColor = false;
-            this.btnlammoi.Click += new System.EventHandler(this.btnlammoi_Click);
             // 
             // btntimkiem
             // 
@@ -496,7 +499,6 @@ namespace MUSICTALENT
             this.btntimkiem.TabIndex = 1;
             this.btntimkiem.Text = "Tìm kiếm";
             this.btntimkiem.UseVisualStyleBackColor = false;
-            this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
             // 
             // btnthoat
             // 
@@ -511,7 +513,6 @@ namespace MUSICTALENT
             this.btnthoat.TabIndex = 1;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = false;
-            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // label1
             // 
@@ -521,10 +522,10 @@ namespace MUSICTALENT
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Mincho", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Honeydew;
-            this.label1.Location = new System.Drawing.Point(4, 34);
+            this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1355, 109);
+            this.label1.Size = new System.Drawing.Size(1318, 109);
             this.label1.TabIndex = 2;
             this.label1.Text = "THÔNG TIN NHẠC CỤ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -533,7 +534,9 @@ namespace MUSICTALENT
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.On;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trangChủToolStripMenuItem,
@@ -541,27 +544,32 @@ namespace MUSICTALENT
             this.giấyTờToolStripMenuItem,
             this.thốngKêToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
-            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1363, 27);
-            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.menuStrip1.Size = new System.Drawing.Size(1326, 35);
+            this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // trangChủToolStripMenuItem
             // 
+            this.trangChủToolStripMenuItem.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.trangChủToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.trangChủToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.trangChủToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.trangChủToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
             this.trangChủToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(109, 23);
             this.trangChủToolStripMenuItem.Text = "Trang chủ";
-            this.trangChủToolStripMenuItem.Click += new System.EventHandler(this.trangChủToolStripMenuItem_Click);
             // 
             // quảnLýNhạcCụToolStripMenuItem
             // 
             this.quảnLýNhạcCụToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nhạcCụToolStripMenuItem,
+            this.chứcVụVàDVTToolStripMenuItem,
             this.nhânViênToolStripMenuItem,
             this.kháchHàngToolStripMenuItem,
             this.nhàCungCấpToolStripMenuItem});
@@ -574,30 +582,32 @@ namespace MUSICTALENT
             // 
             this.nhạcCụToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.nhạcCụToolStripMenuItem.Name = "nhạcCụToolStripMenuItem";
-            this.nhạcCụToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.nhạcCụToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
             this.nhạcCụToolStripMenuItem.Text = "Nhạc cụ";
-            this.nhạcCụToolStripMenuItem.Click += new System.EventHandler(this.nhạcCụToolStripMenuItem_Click);
+            // 
+            // chứcVụVàDVTToolStripMenuItem
+            // 
+            this.chứcVụVàDVTToolStripMenuItem.Name = "chứcVụVàDVTToolStripMenuItem";
+            this.chứcVụVàDVTToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.chứcVụVàDVTToolStripMenuItem.Text = "Chức vụ và DVT";
             // 
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
-            this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // kháchHàngToolStripMenuItem
             // 
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
             this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
-            this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
             // 
             // nhàCungCấpToolStripMenuItem
             // 
             this.nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
-            this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
             this.nhàCungCấpToolStripMenuItem.Text = "Nhà cung cấp";
-            this.nhàCungCấpToolStripMenuItem.Click += new System.EventHandler(this.nhàCungCấpToolStripMenuItem_Click);
             // 
             // giấyTờToolStripMenuItem
             // 
@@ -684,7 +694,6 @@ namespace MUSICTALENT
             this.đăngXuấtToolStripMenuItem.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(112, 23);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
-            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // Nhaccu
             // 
@@ -695,18 +704,21 @@ namespace MUSICTALENT
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1326, 639);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1326, 651);
+            this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpButton = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Nhaccu";
             this.ShowIcon = false;
             this.Text = "Danh sách nhạc cụ";
             this.Load += new System.EventHandler(this.Nhaccu_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -723,59 +735,59 @@ namespace MUSICTALENT
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýNhạcCụToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nhạcCụToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kháchHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem giấyTờToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hóaĐơnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phiếuNhậpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phiếuSựCốToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phiếuBảoHànhToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem doanhThuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sốLiệuNhậpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chiTiếtChiTiếuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chiTiếtThuVàoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cbbMADVT;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtGIA;
-        private System.Windows.Forms.TextBox txtGHICHU;
-        private System.Windows.Forms.TextBox txtTENNC;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMANC;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnxoa;
-        private System.Windows.Forms.Button btnlammoi;
-        private System.Windows.Forms.Button btntimkiem;
-        private System.Windows.Forms.Button btnthoat;
-        private System.Windows.Forms.Button btnsua;
-        private System.Windows.Forms.ToolStripMenuItem nhàCungCấpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thuêMượnToolStripMenuItem;
+        private SplitContainer splitContainer1;
+        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel tableLayoutPanel2;
+        private GroupBox groupBox2;
+        private ComboBox cbbMADVT;
+        private Label label8;
+        private Label label7;
+        private Label label5;
+        private Label label4;
+        private TextBox txtGIA;
+        private TextBox txtGHICHU;
+        private TextBox txtTENNC;
         private TextBox txtSOLUONG;
+        private Label label3;
+        private TextBox txtMANC;
+        private Label label2;
+        private TableLayoutPanel tableLayoutPanel3;
+        private GroupBox groupBox1;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private DataGridView dataGridView1;
+        private GroupBox groupBox3;
+        private FlowLayoutPanel flowLayoutPanel3;
+        private Button btnThem;
+        private Button btnsua;
+        private Button btnxoa;
+        private Button btnlammoi;
+        private Button btntimkiem;
+        private Button btnthoat;
+        private Label label1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem trangChủToolStripMenuItem;
+        private ToolStripMenuItem quảnLýNhạcCụToolStripMenuItem;
+        private ToolStripMenuItem nhạcCụToolStripMenuItem;
+        private ToolStripMenuItem chứcVụVàDVTToolStripMenuItem;
+        private ToolStripMenuItem nhânViênToolStripMenuItem;
+        private ToolStripMenuItem kháchHàngToolStripMenuItem;
+        private ToolStripMenuItem nhàCungCấpToolStripMenuItem;
+        private ToolStripMenuItem giấyTờToolStripMenuItem;
+        private ToolStripMenuItem hóaĐơnToolStripMenuItem;
+        private ToolStripMenuItem phiếuNhậpToolStripMenuItem;
+        private ToolStripMenuItem phiếuSựCốToolStripMenuItem;
+        private ToolStripMenuItem phiếuBảoHànhToolStripMenuItem;
+        private ToolStripMenuItem thuêMượnToolStripMenuItem;
+        private ToolStripMenuItem thốngKêToolStripMenuItem;
+        private ToolStripMenuItem doanhThuToolStripMenuItem;
+        private ToolStripMenuItem sốLiệuNhậpToolStripMenuItem;
+        private ToolStripMenuItem chiTiếtChiTiếuToolStripMenuItem;
+        private ToolStripMenuItem chiTiếtThuVàoToolStripMenuItem;
+        private ToolStripMenuItem đăngXuấtToolStripMenuItem;
     }
 }

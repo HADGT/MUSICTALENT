@@ -691,6 +691,7 @@
             this.btnsuaDVT.TabIndex = 2;
             this.btnsuaDVT.Text = "Sửa";
             this.btnsuaDVT.UseVisualStyleBackColor = false;
+            this.btnsuaDVT.Click += new System.EventHandler(this.btnsuaDVT_Click);
             // 
             // btnthemDVT
             // 

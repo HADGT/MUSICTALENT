@@ -295,5 +295,10 @@ namespace MUSICTALENT
                 MessageBox.Show("Vui lòng điền thông tin muốn thêm!");
             }
         }
+
+        private void btnsuaDVT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
